@@ -11,7 +11,7 @@ store = redis.Redis()
 
 def count_url_access(method):
     """ Decorator counting how many times
-    a URL is being accessed """
+    a URL is been accessed """
     @wraps(method)
     def wrapper(url):
         cached_key = "cached:" + url
